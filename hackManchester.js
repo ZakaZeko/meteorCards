@@ -14,7 +14,18 @@ if (Meteor.isClient) {
     'click #btnNewCard': (event, template) => {
       myCurrentCard = Cards.findOne({name:'somenameOther222'});
       Session.set("enemy", "Eurasia");
-    }
+    }, 
+    'click .exampleButton': function(){ //.examplebutton doesnt exist...
+      Meteor.call('nextMove', player, selection, card, function (error, result) {
+      if (error) {
+        // handle error
+      } else {
+        // examine result
+        //logic goes here!!!
+      }
+      });
+
+      }
   });
   Template.currentCard.helpers({
     Card: function() {
