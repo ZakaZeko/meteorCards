@@ -100,16 +100,25 @@ if (Meteor.isClient) {
 
 if (Meteor.isServer) {
   if (Cards.find().count() === 0){
-    Cards.insert({name:'Eiffel', attr1:3, attr2:3, attr3:0, attr4:0,attr5:3,attr6:0,attr7:0});
-    Cards.insert({name:'Smalltalk', attr1:2, attr2:3, attr3:2, attr4:1,attr5:1,attr6:0,attr7:0});
-    Cards.insert({name:'Ruby', attr1:1, attr2:2, attr3:2, attr4:2,attr5:3,attr6:1,attr7:0});
-    Cards.insert({name:'Java', attr1:3, attr2:3, attr3:2, attr4:4,attr5:3,attr6:2,attr7:2});
-    Cards.insert({name:'C#', attr1:3, attr2:3, attr3:3, attr4:4,attr5:4,attr6:3,attr7:2});
-    Cards.insert({name:'C++', attr1:3, attr2:0, attr3:3, attr4:3,attr5:2,attr6:0,attr7:2});
-    Cards.insert({name:'Python', attr1:2, attr2:1, attr3:3, attr4:3,attr5:3,attr6:0,attr7:0});
-
-
-
+      Cards.insert({name:'Eiffel', attr1:3, attr2:3, attr3:0, attr4:0,attr5:3,attr6:0,attr7:0});
+      Cards.insert({name:'Smalltalk', attr1:2, attr2:3, attr3:2, attr4:1,attr5:1,attr6:0,attr7:0});
+      Cards.insert({name:'Ruby', attr1:1, attr2:2, attr3:2, attr4:2,attr5:3,attr6:1,attr7:0});
+      Cards.insert({name:'Java', attr1:3, attr2:3, attr3:2, attr4:4,attr5:3,attr6:2,attr7:2});
+      Cards.insert({name:'C#', attr1:3, attr2:3, attr3:3, attr4:4,attr5:4,attr6:3,attr7:2});
+      Cards.insert({name:'C++', attr1:3, attr2:0, attr3:3, attr4:3,attr5:2,attr6:0,attr7:2});
+      Cards.insert({name:'Python', attr1:2, attr2:1, attr3:3, attr4:3,attr5:3,attr6:0,attr7:0});
+      Cards.insert({name:'Perl', attr1:2, attr2:2, attr3:0, attr4:2,attr5:2,attr6:1,attr7:0});
+      Cards.insert({name:'Visual Basic', attr1:3, attr2:2, attr3:3, attr4:3,attr5:1,attr6:0,attr7:0});
+      Cards.insert({name:'C', attr1:4, attr2:4, attr3:3, attr4:4,attr5:4,attr6:3,attr7:3});
+      Cards.insert({name:'PHP', attr1:3, attr2:2, attr3:3, attr4:4,attr5:4,attr6:2,attr7:2});
+      Cards.insert({name:'Java Script', attr1:2, attr2:2, attr3:2, attr4:2,attr5:2,attr6:2,attr7:2});
+      Cards.insert({name:'Scheme', attr1:2, attr2:2, attr3:3, attr4:1,attr5:1,attr6:0,attr7:1});
+      Cards.insert({name:'Haskell', attr1:3, attr2:1, attr3:2, attr4:3,attr5:2,attr6:1,attr7:2});
+      Cards.insert({name:'Pascal', attr1:3, attr2:2, attr3:3, attr4:3,attr5:1,attr6:1,attr7:1});
+      Cards.insert({name:'Scala', attr1:2, attr2:0, attr3:2, attr4:3,attr5:2,attr6:3,attr7:1});
+      Cards.insert({name:'Go', attr1:0, attr2:1, attr3:2, attr4:3,attr5:3,attr6:0,attr7:0});
+      Cards.insert({name:'Clojure', attr1:1, attr2:2, attr3:2, attr4:3,attr5:2,attr6:3,attr7:2});
+      Cards.insert({name:'Objective C', attr1:2, attr2:2, attr3:2, attr4:1,attr5:2,attr6:2,attr7:2});
 
   }
 
