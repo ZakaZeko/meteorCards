@@ -3,7 +3,7 @@
 </head>
 
 <body>
-  <h1>Welcome to Meteor!</h1>
+  <h1>Welcome to the game!</h1>
 
   <!--{{> deck}}-->
   <div class="row">
@@ -35,7 +35,7 @@
 <template name="ui">
 
 <form action="" method="POST" role="form">
-	<legend>Form title</legend>
+	<legend>Current Hand</legend>
 
 {{#if gamestate = 0}}
 	
@@ -50,16 +50,22 @@
 {{/if}}
 
 	<div class="form-group">
-		<button type="button" class="btn btn-primary btnMenu">1</button>
+		<button type="button" id="btnFirstCard">First Card</button>
 	</div>
 	<div class="form-group">
-		<button type="button" class="btn btn-success btnMenu">2</button>
+		<button type="button" id="btnSecondCard" class="btn btn-success btnMenu">Second card</button>
 	</div>
 	<div class="form-group">
-		<button type="button" class="btn btn-info btnMenu">3</button>
-	</div>	
+		<button type="button" id="btnThirdCard" class="btn btn-info btnMenu">Third card</button>
+	</div>
+    <div class="form-group">
+        <button type="button" id="btnFourthCard" class="btn btn-info btnMenu">Fourth card</button>
+    </div>
+    <div class="form-group">
+        <button type="button" id="btnFifthCard" class="btn btn-info btnMenu">Fifth card</button>
+    </div>
 
-	<button type="button" class="btn btn-primary">Submit</button>
+
 </form>
 
 
@@ -67,13 +73,27 @@
 
 
 
-	<button type="button" id="btnNewCard">New Card</button>
+
+	<button type="button" id="btnNewCard">Select the card</button>
 	<!--{{> currentCard}}-->
+
+
+    <form action="" method="post" role="form">
+
+    <legend>{{CurrentCardSelected}}</legend>
+
+        <div class="form-group">
+
+            <img src="https://upload.wikimedia.org/wikipedia/en/8/88/Java_logo.png" alt="Click here">
+
+        </div>
+
+    </form>
+
+
 </template>
 <template name="currentCard">
 {{#with Card}}
 	<p id="{{_id}}">{{name}}, {{attr1}}</p>
 {{/with}}
 </template>
-
-
