@@ -9,19 +9,27 @@ if (Meteor.isClient) {
       return Cards.find();
     }
   });
+  Template.ui.helpers({
+    gamestate: function() {
+      return 'the gamestate....'
+    }
+  });
 
   Template.ui.events({
-    'click #btnNewCard': (event, template) => {
+    'click #btnNewCard': function(event, template) {
       myCurrentCard = Cards.findOne({name:'somenameOther222'});
       Session.set("enemy", "Eurasia");
     }, 
-    'click .exampleButton': function(){ //.examplebutton doesnt exist...
+    'click .attributeBtn': function(event, template){ //.examplebutton doesnt exist...
       Meteor.call('nextMove', player, selection, card, function (error, result) {
       if (error) {
         // handle error
       } else {
         // examine result
         //logic goes here!!!
+        selection = event.getTarget.attr('id');
+
+        //<button id="attr1" class="attributeBtn">Attr1</button>
       }
       });
 
