@@ -1,5 +1,5 @@
 Cards = new Mongo.Collection("cards");
-
+player = "PlayerNum";
 
 if (Meteor.isClient) {
   var myCurrentCard = {};
@@ -16,24 +16,24 @@ if (Meteor.isClient) {
   });
 
   Template.ui.events({
-    'click #btnNewCard': function(event, template) {
+    'click #btnNewCard': function(event, template)  {
       myCurrentCard = Cards.findOne({name:'somenameOther222'});
       Session.set("enemy", "Eurasia");
-    }, 
-    'click .attributeBtn': function(event, template){ //.examplebutton doesnt exist...
-      Meteor.call('nextMove', player, selection, card, function (error, result) {
-      if (error) {
+    },
+   // 'click .attributeBtn': function(event, template){ //.examplebutton doesnt exist...
+   //   Meteor.call('nextMove', player, selection, card, function (error, result) {
+   //   if (error) {
         // handle error
-      } else {
+  //    } else {
         // examine result
         //logic goes here!!!
-        selection = event.getTarget.attr('id');
+  //      selection = event.getTarget.attr('id');
 
         //<button id="attr1" class="attributeBtn">Attr1</button>
-      }
-      });
+//      }
+ //     });
 
-      }
+ //     }
   });
   Template.currentCard.helpers({
     Card: function() {
@@ -41,6 +41,7 @@ if (Meteor.isClient) {
       //return Cards.findOne({name:'somenameOther222'});
     }
   });
+
 
 
 
@@ -80,5 +81,7 @@ if (Meteor.isServer) {
 
   Meteor.startup(function () {
     // code to run on server at startup
+
+
   });
 }
