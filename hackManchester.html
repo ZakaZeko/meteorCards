@@ -1,0 +1,77 @@
+<head>
+  <title>hackManchester</title>
+</head>
+
+<body>
+  <h1>Welcome to Meteor!</h1>
+
+  <!--{{> deck}}-->
+  <div class="row">
+  	<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+  		
+  	</div>
+  	<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+  		{{> ui}}
+  	</div>
+  </div>
+  
+
+</body>
+
+
+
+<template name="deck">
+<ul>
+	{{#each Cards}}
+		{{> cardInDeck}}
+	{{/each}}
+</ul>
+</template>
+
+<template name="cardInDeck">
+	<li id="{{_id}}">{{name}}, {{attr1}}</li>
+</template>
+
+<template name="ui">
+
+<form action="" method="POST" role="form">
+	<legend>Form title</legend>
+
+{{#if gamestate = 0}}
+	
+{{/if}}
+
+{{#if gamestate = 1}}
+
+{{/if}}
+
+{{#if gamestate = 2}}
+
+{{/if}}
+
+	<div class="form-group">
+		<button type="button" class="btn btn-primary btnMenu">1</button>
+	</div>
+	<div class="form-group">
+		<button type="button" class="btn btn-success btnMenu">2</button>
+	</div>
+	<div class="form-group">
+		<button type="button" class="btn btn-info btnMenu">3</button>
+	</div>	
+
+	<button type="button" class="btn btn-primary">Submit</button>
+</form>
+
+
+
+
+
+
+	<button type="button" id="btnNewCard">New Card</button>
+	<!--{{> currentCard}}-->
+</template>
+<template name="currentCard">
+{{#with Card}}
+	<p id="{{_id}}">{{name}}, {{attr1}}</p>
+{{/with}}
+</template>
