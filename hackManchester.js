@@ -130,7 +130,6 @@ if (Meteor.isServer) {
       Cards.insert({name:'Go', attr1:0, attr2:1, attr3:2, attr4:3,attr5:3,attr6:0,attr7:0});
       Cards.insert({name:'Clojure', attr1:1, attr2:2, attr3:2, attr4:3,attr5:2,attr6:3,attr7:2});
       Cards.insert({name:'Objective C', attr1:2, attr2:2, attr3:2, attr4:1,attr5:2,attr6:2,attr7:2});
-
   }
 
 
