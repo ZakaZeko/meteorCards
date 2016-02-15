@@ -19,7 +19,7 @@ if (Meteor.isClient) {
     'click #btnNewCard': function(event, template) {
 
 
-      Session.set("CurrentCardSelected", myCurrentCard);
+     document.getElementById("LedforCard").innerHTML =  myCurrentCard.toString();
     },
 
     'click #btnFirstCard': function(){
@@ -27,6 +27,17 @@ if (Meteor.isClient) {
       myCurrentCard = "First card";
 
     },
+
+
+      'click #Get_Hand': function(){
+
+
+
+
+
+
+      },
+
 
 
     'click #btnSecondCard': function(){
