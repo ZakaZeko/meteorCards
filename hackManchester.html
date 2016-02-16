@@ -38,39 +38,70 @@
 <template name="ui">
 
 <form action="" method="POST" role="form">
-	<legend>Current Hand</legend>
+	<legend>Menu</legend>
 
 {{#if gamestate0}}
 
+    <div class="col-md-12">
+        <button type="button" id="GetHand"  class="btn btn-custom" > Draw </button>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <a class="custom-border" id="btnFirstCard">
+                    <img class="centeredBlock img-thumbnail" src="1.png" >
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a class="custom-border" id="btnSecondCard">
+                    <img class="centeredBlock img-thumbnail" src="2.png">
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a class="custom-border" id="btnThirdCard">
+                    <img class="centeredBlock img-thumbnail" src="3.png">
+                </a>
+            </div>
+            <div class="col-md-4 col-md-offset-2">
+                <a class="custom-border" id="btnFourthCard">
+                    <img class="centeredBlock img-thumbnail" src="4.png">
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a class="custom-border" id="btnFifthCard">
+                    <img class="centeredBlock img-thumbnail" src="5.png">
+                </a>
+            </div>
+        </div>
+    </div>
 
 
 
-
-        <button type="button" id="btnBack" class="btn btn-success btnMenu" >Back</button>
+        <button type="button" id="btnBack1" class="btn btn-custom" >Back</button>
 
 
 
 <br>
         <div class="form-group">
-            <button type="button" id="GetHand"  class="btn btn-success btnMenu" > pick up hand </button>
+            <button type="button" id="GetHand"  class="btn btn-custom" > Draw </button>
         </div>
 
     <br>
 
 	<div class="form-group">
-		<button type="button" id="btnFirstCard"  class="btn btn-success btnMenu" >First Card</button>
+		<button type="button" id="btnFirstCard"  class="btn btn-custom" >First Card</button>
 	</div>
 	<div class="form-group">
-		<button type="button" id="btnSecondCard" class="btn btn-success btnMenu">Second card</button>
+		<button type="button" id="btnSecondCard" class="btn btn-custom">Second card</button>
 	</div>
 	<div class="form-group">
-		<button type="button" id="btnThirdCard" class="btn btn-info btnMenu">Third card</button>
+		<button type="button" id="btnThirdCard" class="btn btn-custom">Third card</button>
 	</div>
     <div class="form-group">
-        <button type="button" id="btnFourthCard" class="btn btn-info btnMenu">Fourth card</button>
+        <button type="button" id="btnFourthCard" class="btn btn-custom">Fourth card</button>
     </div>
     <div class="form-group">
-        <button type="button" id="btnFifthCard" class="btn btn-info btnMenu">Fifth card</button>
+        <button type="button" id="btnFifthCard" class="btn btn-custom">Fifth card</button>
     </div>
 
 
@@ -89,36 +120,36 @@
 
 
         <div class="form-group">
-            <button type="button" id="attr11" class="btn btn-info btnMenu">Fifth card</button>
+            <button type="button" id="attr11" class="btn btn-custom">Fifth card</button>
         </div>
 
         <div class="form-group">
-            <button type="button" id="attr12" class="btn btn-info btnMenu">Fifth card</button>
+            <button type="button" id="attr12" class="btn btn-custom">Fifth card</button>
         </div>
 
         <div class="form-group">
-            <button type="button" id="attr13" class="btn btn-info btnMenu">Fifth card</button>
+            <button type="button" id="attr13" class="btn btn-custom">Fifth card</button>
         </div>
 
         <div class="form-group">
-            <button type="button" id="attr14" class="btn btn-info btnMenu">Fifth card</button>
+            <button type="button" id="attr14" class="btn btn-custom">Fifth card</button>
         </div>
 
         <div class="form-group">
-            <button type="button" id="attr15" class="btn btn-info btnMenu">Fifth card</button>
+            <button type="button" id="attr15" class="btn btn-custom">Fifth card</button>
         </div>
 
         <div class="form-group">
-            <button type="button" id="attr16" class="btn btn-info btnMenu">Fifth card</button>
+            <button type="button" id="attr16" class="btn btn-custom">Fifth card</button>
         </div>
 
         <div class="form-group">
-            <button type="button" id="attr17" class="btn btn-info btnMenu">Fifth card</button>
+            <button type="button" id="attr17" class="btn btn-custom">Fifth card</button>
         </div>
 
 
         <div class="form-group">
-            <button type="button" id="btnPlay" class="btn btn-info btnmenu">Play your turn</button>
+            <button type="button" id="btnPlay" class="btn btn-custom">Play your turn</button>
         </div>
 
     </form>
@@ -133,32 +164,32 @@
 
 
         <div class="form-group">
-            <button type="button" id="btnBack"  class="btn btn-success btnMenu" > Back </button>
+            <button type="button" id="btnBack2"  class="btn btn-custom" > Back </button>
         </div>
         <br>
         <!-- <button type="button" id="btnStartAnewGame"  class="btn btn-success btnMenu" >Start a new game</button> -->
 
         <div class="form-group">
-            <button type="button" id="GetHand2"  class="btn btn-success btnMenu" > pick up hand </button>
+            <button type="button" id="GetHand2"  class="btn btn-custom" > pick up hand </button>
         </div>
 
         <br>
 
 
         <div class="form-group">
-            <button type="button" id="btnFirstCard2"  class="btn btn-success btnMenu" >First Card</button>
+            <button type="button" id="btnFirstCard2"  class="btn btn-custom" >First Card</button>
         </div>
         <div class="form-group">
-            <button type="button" id="btnSecondCard2" class="btn btn-success btnMenu">Second card</button>
+            <button type="button" id="btnSecondCard2" class="btn btn-custom">Second card</button>
         </div>
         <div class="form-group">
-            <button type="button" id="btnThirdCard2" class="btn btn-success btnMenu">Third card</button>
+            <button type="button" id="btnThirdCard2" class="btn btn-custom">Third card</button>
         </div>
         <div class="form-group">
-            <button type="button" id="btnFourthCard2" class="btn btn-success btnMenu">Fourth card</button>
+            <button type="button" id="btnFourthCard2" class="btn btn-custom">Fourth card</button>
         </div>
         <div class="form-group">
-            <button type="button" id="btnFifthCard2" class="btn btn-success btnMenu">Fifth card</button>
+            <button type="button" id="btnFifthCard2" class="btn btn-custom">Fifth card</button>
         </div>
 
     </div>
@@ -178,36 +209,36 @@
 
 
         <div class="form-group">
-            <button type="button" id="attr112" class="btn btn-info btnMenu">Fifth card</button>
+            <button type="button" id="attr112" class="btn btn-custom">Fifth card</button>
         </div>
 
         <div class="form-group">
-            <button type="button" id="attr122" class="btn btn-info btnMenu">Fifth card</button>
+            <button type="button" id="attr122" class="btn btn-custom">Fifth card</button>
         </div>
 
         <div class="form-group">
-            <button type="button" id="attr132" class="btn btn-info btnMenu">Fifth card</button>
+            <button type="button" id="attr132" class="btn btn-custom">Fifth card</button>
         </div>
 
         <div class="form-group">
-            <button type="button" id="attr142" class="btn btn-info btnMenu">Fifth card</button>
+            <button type="button" id="attr142" class="btn btn-custom">Fifth card</button>
         </div>
 
         <div class="form-group">
-            <button type="button" id="attr152" class="btn btn-info btnMenu">Fifth card</button>
+            <button type="button" id="attr152" class="btn btn-custom">Fifth card</button>
         </div>
 
         <div class="form-group">
-            <button type="button" id="attr162" class="btn btn-info btnMenu">Fifth card</button>
+            <button type="button" id="attr162" class="btn btn-custom">Fifth card</button>
         </div>
 
         <div class="form-group">
-            <button type="button" id="attr172" class="btn btn-info btnMenu">Fifth card</button>
+            <button type="button" id="attr172" class="btn btn-custom">Fifth card</button>
         </div>
 
 
         <div class="form-group">
-            <button type="button" id="btnPlay2" class="btn btn-info btnmenu">Play your turn</button>
+            <button type="button" id="btnPlay2" class="btn btn-custom">Play your turn</button>
         </div>
 
     </form>
@@ -218,7 +249,7 @@
 {{#if gamestate2}}
 
 
-        <button type="button" id="btnBack"  class="btn btn-success btnMenu" > Back </button>
+        <button type="button" id="btnBack3"  class="btn btn-custom" > Back </button>
 
 
     <!-- <button type="button" id="btnHowToPlay" class="btn btn-success btnMenu" >How to play</button> -->
@@ -231,19 +262,19 @@
 
 
     <div class="form-group">
-        <button type="button" id="btnStartAnewGame"  class="btn btn-success btnMenu" >Start a new game</button>
+        <button type="button" id="btnStartAnewGame"  class="btn btn-custom" >Start a new game</button>
 
 
     </div>
     <div class="form-group">
-        <button type="button" id="btnJoinGame"  class="btn btn-success btnMenu" >Join game</button>
+        <button type="button" id="btnJoinGame"  class="btn btn-custom" >Join game</button>
 
 
     </div>
 
 
     <div class="form-group">
-        <button type="button" id="btnHowToPlay"  class="btn btn-success btnMenu" >How to play</button>
+        <button type="button" id="btnHowToPlay"  class="btn btn-custom" >How to play</button>
 
     </div>
 

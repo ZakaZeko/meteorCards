@@ -118,8 +118,7 @@
 
                 Session.set("gamestate",0)
 
-
-
+                
 
 
             },
@@ -128,6 +127,7 @@
             'click #btnJoinGame': function(){
 
                 Session.set("gamestate",1)
+
 
 
 
