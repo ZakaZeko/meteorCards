@@ -7,9 +7,7 @@
 
   <!--{{> deck}}-->
   <div class="row">
-  	<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-  		
-  	</div>
+
   	<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
   		{{> ui}}
   	</div>
@@ -34,49 +32,227 @@
 
 <template name="ui">
 
-<form action="" method="POST" role="form">
+
+
+
+
+
+
+    <form action="" method="POST" role="form">
 	<legend>Current Hand</legend>
 
-{{#if gamestate = 0}}
-	
+{{#if gamestate0}}
+
+
+
+
+
+        <button type="button" id="btnBack1" class="btn btn-success btnMenu" >Back</button>
+
+
+
+<br>
+        <div class="form-group">
+            <button type="button" id="GetHand"  class="btn btn-success btnMenu" > pick up hand </button>
+        </div>
+
+        <br>
+
+
+        <div class="form-group">
+            <button type="button" id="btnFirstCard"  class="btn btn-success btnMenu" >First Card</button>
+        </div>
+        <div class="form-group">
+            <button type="button" id="btnSecondCard" class="btn btn-success btnMenu">Second card</button>
+        </div>
+        <div class="form-group">
+            <button type="button" id="btnThirdCard" class="btn btn-success btnMenu">Third card</button>
+        </div>
+        <div class="form-group">
+            <button type="button" id="btnFourthCard" class="btn btn-success btnMenu">Fourth card</button>
+        </div>
+        <div class="form-group">
+            <button type="button" id="btnFifthCard" class="btn btn-success btnMenu">Fifth card</button>
+        </div>
+
+
+
+    <form action="" method="post" role="form">
+
+        <legend id = "LedforCard" >{{CurrentCardSelected}}</legend>
+
+
+
+        <div class="form-group">
+
+            <img id="imgattr" src="https://upload.wikimedia.org/wikipedia/en/8/88/Java_logo.png" alt="Click here">
+
+        </div>
+
+
+
+
+        <div class="form-group">
+            <button type="button" id="attr11" class="btn btn-info btnMenu">Fifth card</button>
+        </div>
+
+        <div class="form-group">
+            <button type="button" id="attr12" class="btn btn-info btnMenu">Fifth card</button>
+        </div>
+
+        <div class="form-group">
+            <button type="button" id="attr13" class="btn btn-info btnMenu">Fifth card</button>
+        </div>
+
+        <div class="form-group">
+            <button type="button" id="attr14" class="btn btn-info btnMenu">Fifth card</button>
+        </div>
+
+        <div class="form-group">
+            <button type="button" id="attr15" class="btn btn-info btnMenu">Fifth card</button>
+        </div>
+
+        <div class="form-group">
+            <button type="button" id="attr16" class="btn btn-info btnMenu">Fifth card</button>
+        </div>
+
+        <div class="form-group">
+            <button type="button" id="attr17" class="btn btn-info btnMenu">Fifth card</button>
+        </div>
+
+
+        <div class="form-group">
+            <button type="button" id="btnPlay" class="btn btn-info btnmenu">Play your turn</button>
+        </div>
+
+    </form>
 {{/if}}
 
-{{#if gamestate = 1}}
+{{#if gamestate1}}
+
+
+
+    <div class="form-group">
+
+
+
+        <div class="form-group">
+            <button type="button" id="btnBack2"  class="btn btn-success btnMenu" > Back </button>
+        </div>
+        <br>
+        <!-- <button type="button" id="btnStartAnewGame"  class="btn btn-success btnMenu" >Start a new game</button> -->
+
+        <div class="form-group">
+            <button type="button" id="GetHand2"  class="btn btn-success btnMenu" > pick up hand </button>
+        </div>
+
+        <br>
+
+
+        <div class="form-group">
+            <button type="button" id="btnFirstCard2"  class="btn btn-success btnMenu" >First Card</button>
+        </div>
+        <div class="form-group">
+            <button type="button" id="btnSecondCard2" class="btn btn-success btnMenu">Second card</button>
+        </div>
+        <div class="form-group">
+            <button type="button" id="btnThirdCard2" class="btn btn-success btnMenu">Third card</button>
+        </div>
+        <div class="form-group">
+            <button type="button" id="btnFourthCard2" class="btn btn-success btnMenu">Fourth card</button>
+        </div>
+        <div class="form-group">
+            <button type="button" id="btnFifthCard2" class="btn btn-success btnMenu">Fifth card</button>
+        </div>
+
+    </div>
+
+    <form action="" method="post" role="form">
+
+        <legend id = "LedforCard2" >{{CurrentCardSelected}}</legend>
+
+
+
+        <div class="form-group">
+
+            <img id="imgattr" src="https://upload.wikimedia.org/wikipedia/en/8/88/Java_logo.png" alt="Click here">
+
+        </div>
+
+
+
+        <div class="form-group">
+            <button type="button" id="attr112" class="btn btn-info btnMenu">Fifth card</button>
+        </div>
+
+        <div class="form-group">
+            <button type="button" id="attr122" class="btn btn-info btnMenu">Fifth card</button>
+        </div>
+
+        <div class="form-group">
+            <button type="button" id="attr132" class="btn btn-info btnMenu">Fifth card</button>
+        </div>
+
+        <div class="form-group">
+            <button type="button" id="attr142" class="btn btn-info btnMenu">Fifth card</button>
+        </div>
+
+        <div class="form-group">
+            <button type="button" id="attr152" class="btn btn-info btnMenu">Fifth card</button>
+        </div>
+
+        <div class="form-group">
+            <button type="button" id="attr162" class="btn btn-info btnMenu">Fifth card</button>
+        </div>
+
+        <div class="form-group">
+            <button type="button" id="attr172" class="btn btn-info btnMenu">Fifth card</button>
+        </div>
+
+
+        <div class="form-group">
+            <button type="button" id="btnPlay2" class="btn btn-info btnmenu">Play your turn</button>
+        </div>
+
+    </form>
+
+<!-- <button type="button" id="btnjoingame" class="btn btn-success btnMenu" >Join game</button> -->
+{{/if}}
+
+{{#if gamestate2}}
+
+
+        <button type="button" id="btnBack3"  class="btn btn-success btnMenu" > Back </button>
+
+
+    <!-- <button type="button" id="btnHowToPlay" class="btn btn-success btnMenu" >How to play</button> -->
+
+
 
 {{/if}}
 
-{{#if gamestate = 2}}
+{{#if gamestate3}}
 
-{{/if}}
 
     <div class="form-group">
         <button type="button" id="btnStartAnewGame"  class="btn btn-success btnMenu" >Start a new game</button>
 
 
     </div>
+    <div class="form-group">
+        <button type="button" id="btnJoinGame"  class="btn btn-success btnMenu" >Join game</button>
+
+
+    </div>
 
 
     <div class="form-group">
-        <button type="button" id="GetHand"  class="btn btn-success btnMenu" > pick up hand </button>
+        <button type="button" id="btnHowToPlay"  class="btn btn-success btnMenu" >How to play</button>
+
     </div>
 
-    <br>
+    {{/if}}
 
-	<div class="form-group">
-		<button type="button" id="btnFirstCard"  class="btn btn-success btnMenu" >First Card</button>
-	</div>
-	<div class="form-group">
-		<button type="button" id="btnSecondCard" class="btn btn-success btnMenu">Second card</button>
-	</div>
-	<div class="form-group">
-		<button type="button" id="btnThirdCard" class="btn btn-info btnMenu">Third card</button>
-	</div>
-    <div class="form-group">
-        <button type="button" id="btnFourthCard" class="btn btn-info btnMenu">Fourth card</button>
-    </div>
-    <div class="form-group">
-        <button type="button" id="btnFifthCard" class="btn btn-info btnMenu">Fifth card</button>
-    </div>
 
 
 </form>
@@ -87,21 +263,10 @@
 
 
 
-	<button type="button" id="btnNewCard">Submit the selection</button>
-	<!--{{> currentCard}}-->
 
 
-    <form action="" method="post" role="form">
 
-    <legend id = "LedforCard" >{{CurrentCardSelected}}</legend>
 
-        <div class="form-group">
-
-            <img src="https://upload.wikimedia.org/wikipedia/en/8/88/Java_logo.png" alt="Click here">
-
-        </div>
-
-    </form>
 
 
 </template>
