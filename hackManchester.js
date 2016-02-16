@@ -1,6 +1,7 @@
 Cards = new Mongo.Collection("cards");
 
 
+
 if (Meteor.isClient) {
   var myCurrentCard = {};
 
@@ -133,9 +134,13 @@ if (Meteor.isServer) {
   }
 
 
+
+
   Meteor.methods({
     newGame: function () {
-      // ...
+
+
+
     },
     nextRound: function () {
       // ...
