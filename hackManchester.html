@@ -40,40 +40,12 @@
 <form action="" method="POST" role="form">
 	<legend>Menu</legend>
 
-{{#if gamestate0}}
+{{#if gamestate = 0}}
 
     <div class="col-md-12">
         <button type="button" id="GetHand"  class="btn btn-custom" > Draw </button>
     </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4">
-                <a class="custom-border" id="btnFirstCard">
-                    <img class="centeredBlock img-thumbnail" src="1.png" >
-                </a>
-            </div>
-            <div class="col-md-4">
-                <a class="custom-border" id="btnSecondCard">
-                    <img class="centeredBlock img-thumbnail" src="2.png">
-                </a>
-            </div>
-            <div class="col-md-4">
-                <a class="custom-border" id="btnThirdCard">
-                    <img class="centeredBlock img-thumbnail" src="3.png">
-                </a>
-            </div>
-            <div class="col-md-4 col-md-offset-2">
-                <a class="custom-border" id="btnFourthCard">
-                    <img class="centeredBlock img-thumbnail" src="4.png">
-                </a>
-            </div>
-            <div class="col-md-4">
-                <a class="custom-border" id="btnFifthCard">
-                    <img class="centeredBlock img-thumbnail" src="5.png">
-                </a>
-            </div>
-        </div>
-    </div>
+
 
 
 
@@ -155,7 +127,7 @@
     </form>
 {{/if}}
 
-{{#if gamestate1}}
+{{#if gamestate = 1}}
 
 
 
@@ -262,7 +234,7 @@
 
     <div class="col-md-4 col-md-offset-4">
         <div class="centeredBlock">
-            <div class="form-group">
+            <div class="form-group text-center">
                 <button type="button" id="btnStartAnewGame"  class="btn btn-custom" >Start A New Game</button>
             </div>
         </div>
@@ -270,7 +242,7 @@
 
     <div class="col-md-4 col-md-offset-4">
         <div class="centeredBlock">
-            <div class="form-group">
+            <div class="form-group text-center">
                 <button type="button" id="btnJoinGame"  class="btn btn-custom" >Join Game</button>
             </div>
         </div>
@@ -278,7 +250,7 @@
 
     <div class="col-md-4 col-md-offset-4">
         <div class="centeredBlock">
-            <div class="form-group">
+            <div class="form-group text-center">
                 <button type="button" id="btnHowToPlay"  class="btn btn-custom" >Jargon Buster</button>
             </div>
         </div>
