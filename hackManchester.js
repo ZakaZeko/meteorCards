@@ -4,11 +4,12 @@ Cards = new Mongo.Collection("cards");
 
 
 if (Meteor.isClient) {
+    Hand = new Mongo.Collection(null);
 
 
     var StringForGameNumbers = new Array(10);
 
-    var myCurrentCard = {};
+    var myCurrentCard = "";
 
 
     var First= "Hello";
@@ -19,16 +20,17 @@ if (Meteor.isClient) {
 
 
 
+
   Template.deck.helpers({
     Cards: function(){
       return Cards.find();
     }
   });
   Template.ui.helpers({
-    gamestate: function() {
-      return 'the gamestate....'
-    }
-  });
+      gamestate:function() {
+          return Session.get('gamestate');
+      }
+    });
 
 
 
@@ -36,51 +38,136 @@ if (Meteor.isClient) {
 
 
     Template.ui.events({
-
-
-
-
-
-
-
-
-      'click #btnFirstCard': function () {
+        'click #btnFirstCard': function () {
 
           myCurrentCard = First;
 
+            document.getElementById("LedforCard").innerHTML = myCurrentCard;
+
+            document.getElementById("imgattr").src =  Cards._collection.findOne({name:myCurrentCard}).attr8 + ".png";
+
+
+            document.getElementById("attr11").innerHTML =  "Error Handling: " + Cards._collection.findOne({name:myCurrentCard}).attr1;
+            document.getElementById("attr12").innerHTML =  "Garbage Collection: " + Cards._collection.findOne({name:myCurrentCard}).attr2;
+            document.getElementById("attr13").innerHTML =  "Variables & Classes: " + Cards._collection.findOne({name:myCurrentCard}).attr3;
+            document.getElementById("attr14").innerHTML =  "Regular Expressions: " + Cards._collection.findOne({name:myCurrentCard}).attr4;
+            document.getElementById("attr15").innerHTML =  "Language Integration: " + Cards._collection.findOne({name:myCurrentCard}).attr5;
+            document.getElementById("attr16").innerHTML =  "Built-In Security: " + Cards._collection.findOne({name:myCurrentCard}).attr6;
+            document.getElementById("attr17").innerHTML =  "Method Overloading: " + Cards._collection.findOne({name:myCurrentCard}).attr7;
+
       },
 
 
+        'click #btnStratGame': function(){
+
+            Session.set("gamestate",0)
 
 
 
-      'click #btnSecondCard': function () {
+
+
+        },
+
+        'click #btnJoinGame': function(){
+
+            Session.set("gamestate",1)
+
+
+
+        },
+
+
+
+        'click #btnHowToPlay': function(){
+
+            Session.set("gamestate",2)
+
+
+
+        },
+
+
+
+
+
+
+
+
+        'click #btnSecondCard': function () {
 
           myCurrentCard = Second;
 
-      },
+          document.getElementById("LedforCard").innerHTML = myCurrentCard;
 
+          document.getElementById("imgattr").src =  Cards._collection.findOne({name:myCurrentCard}).attr8 + ".png";
+
+
+          document.getElementById("attr11").innerHTML =  "Error Handling: " + Cards._collection.findOne({name:myCurrentCard}).attr1;
+          document.getElementById("attr12").innerHTML =  "Garbage Collection: " + Cards._collection.findOne({name:myCurrentCard}).attr2;
+          document.getElementById("attr13").innerHTML =  "Variables & Classes: " + Cards._collection.findOne({name:myCurrentCard}).attr3;
+          document.getElementById("attr14").innerHTML =  "Regular Expressions: " + Cards._collection.findOne({name:myCurrentCard}).attr4;
+          document.getElementById("attr15").innerHTML =  "Language Integration: " + Cards._collection.findOne({name:myCurrentCard}).attr5;
+          document.getElementById("attr16").innerHTML =  "Built-In Security: " + Cards._collection.findOne({name:myCurrentCard}).attr6;
+          document.getElementById("attr17").innerHTML =  "Method Overloading: " + Cards._collection.findOne({name:myCurrentCard}).attr7;
+
+      },
 
       'click #btnThirdCard': function () {
 
           myCurrentCard = Third;
 
-      },
+          document.getElementById("LedforCard").innerHTML = myCurrentCard;
 
+          document.getElementById("imgattr").src =  Cards._collection.findOne({name:myCurrentCard}).attr8 + ".png";
+
+
+          document.getElementById("attr11").innerHTML =  "Error Handling: " + Cards._collection.findOne({name:myCurrentCard}).attr1;
+          document.getElementById("attr12").innerHTML =  "Garbage Collection: " + Cards._collection.findOne({name:myCurrentCard}).attr2;
+          document.getElementById("attr13").innerHTML =  "Variables & Classes: " + Cards._collection.findOne({name:myCurrentCard}).attr3;
+          document.getElementById("attr14").innerHTML =  "Regular Expressions: " + Cards._collection.findOne({name:myCurrentCard}).attr4;
+          document.getElementById("attr15").innerHTML =  "Language Integration: " + Cards._collection.findOne({name:myCurrentCard}).attr5;
+          document.getElementById("attr16").innerHTML =  "Built-In Security: " + Cards._collection.findOne({name:myCurrentCard}).attr6;
+          document.getElementById("attr17").innerHTML =  "Method Overloading: " + Cards._collection.findOne({name:myCurrentCard}).attr7;
+
+      },
 
       'click #btnFourthCard': function () {
 
           myCurrentCard = Fourth;
 
-      },
+          document.getElementById("LedforCard").innerHTML = myCurrentCard;
 
+          document.getElementById("imgattr").src =  Cards._collection.findOne({name:myCurrentCard}).attr8 + ".png";
+
+
+          document.getElementById("attr11").innerHTML =  "Error Handling: " + Cards._collection.findOne({name:myCurrentCard}).attr1;
+          document.getElementById("attr12").innerHTML =  "Garbage Collection: " + Cards._collection.findOne({name:myCurrentCard}).attr2;
+          document.getElementById("attr13").innerHTML =  "Variables & Classes: " + Cards._collection.findOne({name:myCurrentCard}).attr3;
+          document.getElementById("attr14").innerHTML =  "Regular Expressions: " + Cards._collection.findOne({name:myCurrentCard}).attr4;
+          document.getElementById("attr15").innerHTML =  "Language Integration: " + Cards._collection.findOne({name:myCurrentCard}).attr5;
+          document.getElementById("attr16").innerHTML =  "Built-In Security: " + Cards._collection.findOne({name:myCurrentCard}).attr6;
+          document.getElementById("attr17").innerHTML =  "Method Overloading: " + Cards._collection.findOne({name:myCurrentCard}).attr7;
+
+      },
 
       'click #btnFifthCard': function () {
 
           myCurrentCard = Fifth;
 
-      },
+          document.getElementById("LedforCard").innerHTML = myCurrentCard;
 
+          document.getElementById("imgattr").src =  Cards._collection.findOne({name:myCurrentCard}).attr8 + ".png";
+
+
+          document.getElementById("attr11").innerHTML =  "Error Handling: " + Cards._collection.findOne({name:myCurrentCard}).attr1;
+          document.getElementById("attr12").innerHTML =  "Garbage Collection: " + Cards._collection.findOne({name:myCurrentCard}).attr2;
+          document.getElementById("attr13").innerHTML =  "Variables & Classes: " + Cards._collection.findOne({name:myCurrentCard}).attr3;
+          document.getElementById("attr14").innerHTML =  "Regular Expressions: " + Cards._collection.findOne({name:myCurrentCard}).attr4;
+          document.getElementById("attr15").innerHTML =  "Language Integration: " + Cards._collection.findOne({name:myCurrentCard}).attr5;
+          document.getElementById("attr16").innerHTML =  "Built-In Security: " + Cards._collection.findOne({name:myCurrentCard}).attr6;
+          document.getElementById("attr17").innerHTML =  "Method Overloading: " + Cards._collection.findOne({name:myCurrentCard}).attr7;
+
+      },
 
         'click #GetHand': function () {
 
@@ -109,12 +196,6 @@ if (Meteor.isClient) {
 
 
 
-        'click #btnNewCard': function (event, template) {
-
-
-            document.getElementById("LedforCard").innerHTML = myCurrentCard;
-        },
-
 
 
 
@@ -132,14 +213,27 @@ if (Meteor.isClient) {
           });
 
       },
+        'click .btnExample':function(event){
+            event.preventDefault();
+            var choice = event.target.id;
+            console.log(choice);
+
+
+
+        },
 
       'click #btnStartAnewGame': function () {
+
 
 
 
           StringForGameNumbers =  Meteor.call("newGame");
 
 
+      },
+
+
+        'click #attr11': function(){
 
 
 
@@ -147,7 +241,46 @@ if (Meteor.isClient) {
 
 
 
-      }
+        },
+
+
+        'click #attr12': function(){
+
+
+        },
+
+
+        'click #attr13': function(){
+
+
+        },
+
+        'click #attr14': function(){
+
+
+        },
+
+
+        'click #attr15': function(){
+
+
+        },
+
+
+        'click #attr16': function(){
+
+
+        },
+
+        'click #attr17': function(){
+
+
+        }
+
+
+
+
+
 
   });
   Template.currentCard.helpers({
@@ -172,6 +305,13 @@ if (Meteor.isClient) {
   //     Session.set('counter', Session.get('counter') + 1);
   //   }
   // });
+
+
+
+
+
+
+
 }
 
 if (Meteor.isServer) {
@@ -195,7 +335,7 @@ if (Meteor.isServer) {
       Cards.insert({name:'Pascal', attr1:3, attr2:2, attr3:3, attr4:3,attr5:1,attr6:1,attr7:1,attr8:15});
       Cards.insert({name:'Scala', attr1:2, attr2:0, attr3:2, attr4:3,attr5:2,attr6:3,attr7:1,attr8:16});
       Cards.insert({name:'Go', attr1:0, attr2:1, attr3:2, attr4:3,attr5:3,attr6:0,attr7:0,attr8:17});
-      Cards.insert({name:'Clojure', attr1:1, attr2:2, attr3:2, attr4:3,attr5:2,attr6:3,attr7:2,attr8:8});
+      Cards.insert({name:'Clojure', attr1:1, attr2:2, attr3:2, attr4:3,attr5:2,attr6:3,attr7:2,attr8:18});
       Cards.insert({name:'Objective C', attr1:2, attr2:2, attr3:2, attr4:1,attr5:2,attr6:2,attr7:2,attr8:19});
   }
 

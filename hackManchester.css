@@ -1,4 +1,27 @@
 /* CSS declarations go here */
-.btnMenu {
+body {Background:#34495e;}
+
+h1 {color:white;}
+
+.centeredBlock{
+    display:block;
+    margin: 0 auto;
+}
+legend {color: white;
+    border-bottom: 0;}
+
+.btn-custom {
+    background-color: dodgerblue;
+    border-radius:0px !important;
+    margin-bottom: 5px !important;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+
+.btn-custom:hover {
+    background: green;
+}
+.gamestate{
+
 
 }
