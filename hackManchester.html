@@ -22,6 +22,7 @@
 </body>
 
 
+
 <template name="deck">
 <ul>
 	{{#each Cards}}
@@ -40,12 +41,22 @@
 	<legend>Current Hand</legend>
 
 {{#if gamestate0}}
-    <button type="button" id="btnBack1" class="btn btn-success btnMenu" >Back</button>
+
+
+
+
+
+        <button type="button" id="btnBack1" class="btn btn-success btnMenu" >Back</button>
+
+
+
+<br>
+        <div class="form-group">
+            <button type="button" id="GetHand"  class="btn btn-success btnMenu" > pick up hand </button>
+        </div>
+
     <br>
-    <div class="form-group">
-        <button type="button" id="GetHand"  class="btn btn-success btnMenu" > pick up hand </button>
-    </div>
-    <br>
+
 	<div class="form-group">
 		<button type="button" id="btnFirstCard"  class="btn btn-success btnMenu" >First Card</button>
 	</div>
@@ -62,13 +73,21 @@
         <button type="button" id="btnFifthCard" class="btn btn-info btnMenu">Fifth card</button>
     </div>
 
+
+
     <form action="" method="post" role="form">
 
     <legend id = "LedforCard" >{{CurrentCardSelected}}</legend>
+
         <div class="form-group">
+
             <img src="https://upload.wikimedia.org/wikipedia/en/8/88/Java_logo.png" alt="Click here">
+
         </div>
-        
+
+
+
+
         <div class="form-group">
             <button type="button" id="attr11" class="btn btn-info btnMenu">Fifth card</button>
         </div>
