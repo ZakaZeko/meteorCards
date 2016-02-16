@@ -3,9 +3,12 @@
 
 
 
+
     if (Meteor.isClient) {
         Hand = new Mongo.Collection(null);
 
+
+        var attrValue = 0 ;
         Session.set("gamestate", 3);
         var StringForGameNumbers = new Array(10);
 
@@ -269,28 +272,33 @@
 
                 currentAttr = 1;
 
+                attrValue = Cards.findOne({name:myCurrentCard}).attr1;
+
             },
 
 
             'click #attr12': function(){
                 currentAttr = 2;
-
+                attrValue = Cards.findOne({name:myCurrentCard}).attr2;
             },
 
 
             'click #attr13': function(){
 
                 currentAttr = 3;
+                attrValue = Cards.findOne({name:myCurrentCard}).attr3;
             },
 
             'click #attr14': function(){
 
-                currentAttr = 4;
+                currentAttr = 4
+                attrValue = Cards.findOne({name:myCurrentCard}).attr4;
             },
 
 
             'click #attr15': function(){
                 currentAttr = 5;
+                attrValue = Cards.findOne({name:myCurrentCard}).attr5;
 
             },
 
@@ -298,16 +306,19 @@
             'click #attr16': function(){
 
                 currentAttr = 6;
+                attrValue = Cards.findOne({name:myCurrentCard}).attr6;
             },
 
             'click #attr17': function(){
 
                 currentAttr = 7;
+                attrValue = Cards.findOne({name:myCurrentCard}).attr7;
             },
 
             'click #btnplay': function(){
 
 
+                Meteor.call("nextMove",["Player1"],[currentAttr],[attrValue])
 
             }
 
@@ -406,6 +417,8 @@
           // ...
         },
         nextMove: function (player, selection, card){
+
+
 
         }
       });
