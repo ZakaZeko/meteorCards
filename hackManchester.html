@@ -3,16 +3,21 @@
 </head>
 
 <body>
-  <h1>Welcome to the game!</h1>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-4">
+            <h1 class="centeredBlock">Welcome to Meteor Cards!</h1>
+        </div>
+    </div>
+</div>
 
-  <!--{{> deck}}-->
-  <div class="row">
-
-  	<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-  		{{> ui}}
-  	</div>
-  </div>
-  
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-12">
+            {{> ui class="centeredBlock"}}
+        </div>
+    </div>
+</div>
 
 </body>
 
@@ -32,13 +37,7 @@
 
 <template name="ui">
 
-
-
-
-
-
-
-    <form action="" method="POST" role="form">
+<form action="" method="POST" role="form">
 	<legend>Current Hand</legend>
 
 {{#if gamestate0}}
@@ -56,36 +55,33 @@
             <button type="button" id="GetHand"  class="btn btn-success btnMenu" > pick up hand </button>
         </div>
 
-        <br>
+    <br>
 
-
-        <div class="form-group">
-            <button type="button" id="btnFirstCard"  class="btn btn-success btnMenu" >First Card</button>
-        </div>
-        <div class="form-group">
-            <button type="button" id="btnSecondCard" class="btn btn-success btnMenu">Second card</button>
-        </div>
-        <div class="form-group">
-            <button type="button" id="btnThirdCard" class="btn btn-success btnMenu">Third card</button>
-        </div>
-        <div class="form-group">
-            <button type="button" id="btnFourthCard" class="btn btn-success btnMenu">Fourth card</button>
-        </div>
-        <div class="form-group">
-            <button type="button" id="btnFifthCard" class="btn btn-success btnMenu">Fifth card</button>
-        </div>
+	<div class="form-group">
+		<button type="button" id="btnFirstCard"  class="btn btn-success btnMenu" >First Card</button>
+	</div>
+	<div class="form-group">
+		<button type="button" id="btnSecondCard" class="btn btn-success btnMenu">Second card</button>
+	</div>
+	<div class="form-group">
+		<button type="button" id="btnThirdCard" class="btn btn-info btnMenu">Third card</button>
+	</div>
+    <div class="form-group">
+        <button type="button" id="btnFourthCard" class="btn btn-info btnMenu">Fourth card</button>
+    </div>
+    <div class="form-group">
+        <button type="button" id="btnFifthCard" class="btn btn-info btnMenu">Fifth card</button>
+    </div>
 
 
 
     <form action="" method="post" role="form">
 
-        <legend id = "LedforCard" >{{CurrentCardSelected}}</legend>
-
-
+    <legend id = "LedforCard" >{{CurrentCardSelected}}</legend>
 
         <div class="form-group">
 
-            <img id="imgattr" src="https://upload.wikimedia.org/wikipedia/en/8/88/Java_logo.png" alt="Click here">
+            <img src="https://upload.wikimedia.org/wikipedia/en/8/88/Java_logo.png" alt="Click here">
 
         </div>
 
@@ -256,17 +252,6 @@
 
 
 </form>
-
-
-
-
-
-
-
-
-
-
-
 
 
 </template>
