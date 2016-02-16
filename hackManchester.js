@@ -307,7 +307,7 @@
 
             'click #btnplay': function(){
 
-                Me
+
 
             }
 
