@@ -3,14 +3,20 @@
 
 
 
+
     if (Meteor.isClient) {
         Hand = new Mongo.Collection(null);
 
+
+        var attrValue = 0 ;
         Session.set("gamestate", 3);
         var StringForGameNumbers = new Array(10);
 
         var myCurrentCard = "";
 
+        var myCurrentCard2 = "";
+
+        var attrValue2 = 0;
 
         var First= "Hello";
         var Second= "Hello";
@@ -20,6 +26,7 @@
 
 
         var currentAttr = 0;
+        var currentAttr2 = 0 ;
 
 
       Template.deck.helpers({
@@ -65,9 +72,28 @@
 
 
         Template.ui.events({
+            'click #btnFirstCard2': function () {
+
+                myCurrentCard2 = First;
+
+                document.getElementById("LedforCard2").innerHTML = myCurrentCard;
+
+                document.getElementById("imgattr2").src =  Cards._collection.findOne({name:myCurrentCard}).attr8 + ".png";
+
+
+                document.getElementById("attr112").innerHTML =  "Error Handling: " + Cards._collection.findOne({name:myCurrentCard}).attr1;
+                document.getElementById("attr122").innerHTML =  "Garbage Collection: " + Cards._collection.findOne({name:myCurrentCard}).attr2;
+                document.getElementById("attr132").innerHTML =  "Variables & Classes: " + Cards._collection.findOne({name:myCurrentCard}).attr3;
+                document.getElementById("attr142").innerHTML =  "Regular Expressions: " + Cards._collection.findOne({name:myCurrentCard}).attr4;
+                document.getElementById("attr152").innerHTML =  "Language Integration: " + Cards._collection.findOne({name:myCurrentCard}).attr5;
+                document.getElementById("attr162").innerHTML =  "Built-In Security: " + Cards._collection.findOne({name:myCurrentCard}).attr6;
+                document.getElementById("attr172").innerHTML =  "Method Overloading: " + Cards._collection.findOne({name:myCurrentCard}).attr7;
+
+            },
+
             'click #btnFirstCard': function () {
 
-              myCurrentCard = First;
+                myCurrentCard = First;
 
                 document.getElementById("LedforCard").innerHTML = myCurrentCard;
 
@@ -82,7 +108,7 @@
                 document.getElementById("attr16").innerHTML =  "Built-In Security: " + Cards._collection.findOne({name:myCurrentCard}).attr6;
                 document.getElementById("attr17").innerHTML =  "Method Overloading: " + Cards._collection.findOne({name:myCurrentCard}).attr7;
 
-          },
+            },
 
 
             'click #btnStartAnewGame': function(){
@@ -239,7 +265,112 @@
 
 
 
-          'click .attributeBtn': function (event, template) { //.examplebutton doesnt exist...
+            'click #btnSecondCard2': function () {
+
+                myCurrentCard2 = Second;
+
+                document.getElementById("LedforCard2").innerHTML = myCurrentCard;
+
+                document.getElementById("imgattr2").src =  Cards._collection.findOne({name:myCurrentCard}).attr8 + ".png";
+
+
+                document.getElementById("attr112").innerHTML =  "Error Handling: " + Cards._collection.findOne({name:myCurrentCard}).attr1;
+                document.getElementById("attr122").innerHTML =  "Garbage Collection: " + Cards._collection.findOne({name:myCurrentCard}).attr2;
+                document.getElementById("attr132").innerHTML =  "Variables & Classes: " + Cards._collection.findOne({name:myCurrentCard}).attr3;
+                document.getElementById("attr142").innerHTML =  "Regular Expressions: " + Cards._collection.findOne({name:myCurrentCard}).attr4;
+                document.getElementById("attr152").innerHTML =  "Language Integration: " + Cards._collection.findOne({name:myCurrentCard}).attr5;
+                document.getElementById("attr162").innerHTML =  "Built-In Security: " + Cards._collection.findOne({name:myCurrentCard}).attr6;
+                document.getElementById("attr172").innerHTML =  "Method Overloading: " + Cards._collection.findOne({name:myCurrentCard}).attr7;
+
+            },
+
+            'click #btnThirdCard2': function () {
+
+                myCurrentCard2 = Third;
+
+                document.getElementById("LedforCard2").innerHTML = myCurrentCard;
+
+                document.getElementById("imgattr2").src =  Cards._collection.findOne({name:myCurrentCard}).attr8 + ".png";
+
+
+                document.getElementById("attr112").innerHTML =  "Error Handling: " + Cards._collection.findOne({name:myCurrentCard}).attr1;
+                document.getElementById("attr122").innerHTML =  "Garbage Collection: " + Cards._collection.findOne({name:myCurrentCard}).attr2;
+                document.getElementById("attr132").innerHTML =  "Variables & Classes: " + Cards._collection.findOne({name:myCurrentCard}).attr3;
+                document.getElementById("attr142").innerHTML =  "Regular Expressions: " + Cards._collection.findOne({name:myCurrentCard}).attr4;
+                document.getElementById("attr152").innerHTML =  "Language Integration: " + Cards._collection.findOne({name:myCurrentCard}).attr5;
+                document.getElementById("attr162").innerHTML =  "Built-In Security: " + Cards._collection.findOne({name:myCurrentCard}).attr6;
+                document.getElementById("attr172").innerHTML =  "Method Overloading: " + Cards._collection.findOne({name:myCurrentCard}).attr7;
+
+            },
+
+            'click #btnFourthCard2': function () {
+
+                myCurrentCard2 = Fourth;
+
+                document.getElementById("LedforCard2").innerHTML = myCurrentCard;
+
+                document.getElementById("imgattr2").src =  Cards._collection.findOne({name:myCurrentCard}).attr8 + ".png";
+
+
+                document.getElementById("attr112").innerHTML =  "Error Handling: " + Cards._collection.findOne({name:myCurrentCard}).attr1;
+                document.getElementById("attr122").innerHTML =  "Garbage Collection: " + Cards._collection.findOne({name:myCurrentCard}).attr2;
+                document.getElementById("attr132").innerHTML =  "Variables & Classes: " + Cards._collection.findOne({name:myCurrentCard}).attr3;
+                document.getElementById("attr142").innerHTML =  "Regular Expressions: " + Cards._collection.findOne({name:myCurrentCard}).attr4;
+                document.getElementById("attr152").innerHTML =  "Language Integration: " + Cards._collection.findOne({name:myCurrentCard}).attr5;
+                document.getElementById("attr162").innerHTML =  "Built-In Security: " + Cards._collection.findOne({name:myCurrentCard}).attr6;
+                document.getElementById("attr172").innerHTML =  "Method Overloading: " + Cards._collection.findOne({name:myCurrentCard}).attr7;
+
+            },
+
+            'click #btnFifthCard2': function () {
+
+                myCurrentCard2 = Fifth;
+
+                document.getElementById("LedforCard2").innerHTML = myCurrentCard;
+
+                document.getElementById("imgattr2").src =  Cards._collection.findOne({name:myCurrentCard}).attr8 + ".png";
+
+
+                document.getElementById("attr112").innerHTML =  "Error Handling: " + Cards._collection.findOne({name:myCurrentCard}).attr1;
+                document.getElementById("attr122").innerHTML =  "Garbage Collection: " + Cards._collection.findOne({name:myCurrentCard}).attr2;
+                document.getElementById("attr132").innerHTML =  "Variables & Classes: " + Cards._collection.findOne({name:myCurrentCard}).attr3;
+                document.getElementById("attr142").innerHTML =  "Regular Expressions: " + Cards._collection.findOne({name:myCurrentCard}).attr4;
+                document.getElementById("attr152").innerHTML =  "Language Integration: " + Cards._collection.findOne({name:myCurrentCard}).attr5;
+                document.getElementById("attr162").innerHTML =  "Built-In Security: " + Cards._collection.findOne({name:myCurrentCard}).attr6;
+                document.getElementById("attr172").innerHTML =  "Method Overloading: " + Cards._collection.findOne({name:myCurrentCard}).attr7;
+
+            },
+
+            'click #GetHand2': function () {
+
+
+                First = Cards._collection.findOne({attr8:11}).name;
+                document.getElementById("btnFirstCard2").innerHTML  = First;
+
+
+                Second = Cards._collection.findOne({attr8:12}).name;
+                document.getElementById("btnSecondCard2").innerHTML  = Second;
+
+
+                Third = Cards._collection.findOne({attr8:13}).name;
+                document.getElementById("btnThirdCard2").innerHTML  = Third;
+
+
+                Fourth = Cards._collection.findOne({attr8:14}).name;
+                document.getElementById("btnFourthCard2").innerHTML  = Fourth;
+
+
+                Fifth = Cards._collection.findOne({attr8:15}).name;
+                document.getElementById("btnFifthCard2").innerHTML  = Fifth;
+
+
+            },
+
+
+
+
+
+            'click .attributeBtn': function (event, template) { //.examplebutton doesnt exist...
               Meteor.call('nextMove', player, selection, card, function (error, result) {
                   if (error) {
                       // handle error
@@ -269,28 +400,33 @@
 
                 currentAttr = 1;
 
+                attrValue = Cards.findOne({name:myCurrentCard}).attr1;
+
             },
 
 
             'click #attr12': function(){
                 currentAttr = 2;
-
+                attrValue = Cards.findOne({name:myCurrentCard}).attr2;
             },
 
 
             'click #attr13': function(){
 
                 currentAttr = 3;
+                attrValue = Cards.findOne({name:myCurrentCard}).attr3;
             },
 
             'click #attr14': function(){
 
-                currentAttr = 4;
+                currentAttr = 4
+                attrValue = Cards.findOne({name:myCurrentCard}).attr4;
             },
 
 
             'click #attr15': function(){
                 currentAttr = 5;
+                attrValue = Cards.findOne({name:myCurrentCard}).attr5;
 
             },
 
@@ -298,19 +434,78 @@
             'click #attr16': function(){
 
                 currentAttr = 6;
+                attrValue = Cards.findOne({name:myCurrentCard}).attr6;
             },
 
             'click #attr17': function(){
 
                 currentAttr = 7;
+                attrValue = Cards.findOne({name:myCurrentCard}).attr7;
             },
 
             'click #btnplay': function(){
 
 
+                Meteor.call("nextMove",["Player1"],[currentAttr],[attrValue])
+
+            },
+
+
+
+
+            'click #attr112': function(){
+
+                currentAttr2 = 1;
+
+                attrValue2 = Cards.findOne({name:myCurrentCard}).attr1;
+
+            },
+
+
+            'click #attr122': function(){
+                currentAttr2 = 2;
+                attrValue2 = Cards.findOne({name:myCurrentCard}).attr2;
+            },
+
+
+            'click #attr132': function(){
+
+                currentAttr2 = 3;
+                attrValue2 = Cards.findOne({name:myCurrentCard}).attr3;
+            },
+
+            'click #attr142': function(){
+
+                currentAttr2 = 4;
+                attrValue2 = Cards.findOne({name:myCurrentCard}).attr4;
+            },
+
+
+            'click #attr152': function(){
+                currentAttr2 = 5;
+                attrValue2 = Cards.findOne({name:myCurrentCard}).attr5;
+
+            },
+
+
+            'click #attr162': function(){
+
+                currentAttr2 = 6;
+                attrValue2 = Cards.findOne({name:myCurrentCard}).attr6;
+            },
+
+            'click #attr172': function(){
+
+                currentAttr2 = 7;
+                attrValue2 = Cards.findOne({name:myCurrentCard}).attr7;
+            },
+
+            'click #btnplay2': function(){
+
+
+                Meteor.call("nextMove",["Player2"],[currentAttr2],[attrValue2])
 
             }
-
 
 
 
@@ -350,6 +545,17 @@
 
     if (Meteor.isServer) {
 
+        var player1A =-1;
+        var player2A =-1;
+
+        var player1AV =0;
+        var player2AV =0;
+
+
+
+
+
+
 
       if (Cards.find().count() === 0){
           Cards.insert({name:'Eiffel', attr1:3, attr2:3, attr3:0, attr4:0,attr5:3,attr6:0,attr7:0,attr8:1});
@@ -377,6 +583,9 @@
 
 
       Meteor.methods({
+
+
+
         newGame: function () {
 
 
@@ -406,6 +615,34 @@
           // ...
         },
         nextMove: function (player, selection, card){
+
+            if (player === "Player1"){
+
+                player1A = selection;
+
+                player1AV = card;
+
+            }else{
+
+                player2A = selection;
+
+                player2AV = card;
+            }
+
+
+            if(playe1A > 0){
+
+                if(player2A>0){
+
+
+
+
+                }
+
+            }
+
+
+
 
         }
       });
